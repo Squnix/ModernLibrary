@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "Title": "Modern Library",
+    "Description": "Rent your favourite books with ease"
+  },
+  "Navigation": {
+    "SignIn": "Log in",
+    "SignOut": "Log out"
+  },
+  "Links": {
+    "Home": "Home page",
+    "MyLibrary": "My library"
+  }
+}

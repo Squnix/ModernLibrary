@@ -1,0 +1,14 @@
+{
+  "Metadata": {
+    "Title": "Nowoczesna biblioteka",
+    "Description": "Wypożyczaj książki z łatwości"
+  },
+  "Navigation": {
+    "SignIn": "Zaloguj",
+    "SignOut": "Wyloguj"
+  },
+  "Links": {
+    "Home": "Strona główna",
+    "MyLibrary": "Moja biblioteczka"
+  }
+}
