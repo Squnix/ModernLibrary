@@ -6,12 +6,14 @@ export default function Register(): React.ReactElement {
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const data: { [key: string]: string } = {};
-        for (const [key, value] of formData) {
-          console.log(key, value);
-          data[key] = value;
-        }
+        const data: {
+          [key: string]: string;
+        } = {};
+        const inputs = e.currentTarget.querySelectorAll("input");
+        inputs.forEach((input) => {
+          if(!input.name) return;
+          data[input.name] = input.value;
+        });
         signIn("credentials", { ...data, callbackUrl: "/" });
         return false;
       }}
@@ -19,7 +21,7 @@ export default function Register(): React.ReactElement {
       className="bg-yellow-200 flex flex-col"
     >
       <label>Username</label>
-      <input type="text" id="name" name="name" />
+      <input type="text" id="username" name="username" />
       <label>Email</label>
       <input type="email" id="email" name="email" />
       <label>Password</label>

@@ -5,7 +5,8 @@
   },
   "Navigation": {
     "SignIn": "Zaloguj",
-    "SignOut": "Wyloguj"
+    "SignOut": "Wyloguj",
+    "Register": "Stwórz konto"
   },
   "Links": {
     "Home": "Strona główna",

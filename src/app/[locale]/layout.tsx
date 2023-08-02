@@ -1,5 +1,5 @@
 import "./globals.css";
-import { NextAuthProvider } from "./components/provider";
+import { Providers } from "./components/providers/providers";
 import NavigationBar from "./components/navigationComponents/navigationBar";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -50,20 +50,15 @@ export default async function RootLayout({
   } catch (err) {
     notFound();
   }
-  const locale = useLocale();
-
-  if (params.locale !== locale) {
-    notFound();
-  }
 
   return (
-    <html lang={locale}>
+    <html lang={params.locale}>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <NextAuthProvider>
+        <NextIntlClientProvider locale={params.locale} messages={messages}>
+          <Providers>
             <NavigationBar />
             {children}
-          </NextAuthProvider>
+          </Providers>
         </NextIntlClientProvider>
       </body>
     </html>
